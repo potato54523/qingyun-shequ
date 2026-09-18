@@ -1,0 +1,42 @@
+.ripple-btn {
+    left:50%;
+    transform: translateX(150px);
+    position: absolute;
+     background-color: #8db8fc;
+    height: 40px;
+    width: 70px;
+    border-radius:7px;
+    border: none;
+    outline: none;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  color:#000000;
+  border-radius:10px;
+  box-shadow:3px 3px 20px -10px;
+  margin-top:30px;
+  touch-action: manipulation; /* 移除延迟 */
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4); /* 涟漪颜色*/
+  pointer-events: none;
+  animation: rippleAnim 0.6s ease-out forwards;
+}
+
+@keyframes rippleAnim {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+.ripple-btn:hover {
+   background: #9dc1fa;
+ }
