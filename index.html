@@ -1,6 +1,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="HTML/log in/log in.css">
+<link rel="stylesheet" href="HTML/log in/input-log-in.css">
 <title>青云社区</title>
 <style>
 @font-face{
@@ -22,6 +23,11 @@ body{
     z-index: 1;
     margin-top:30px;
     font-family: "TTFFont",sans-serif;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 .title2{
     font-size:20px;
@@ -30,6 +36,11 @@ body{
     position: absolute;
     margin-top:70px;
     z-index: 1;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 
@@ -46,14 +57,21 @@ body{
     border-radius:10px;
     box-shadow:10px 10px 50px -30px;
     z-index: 0;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 </style>
 </head>
 <body>
+<div><input type="text" id="name" class="name-log-in"><span style="font-size: 16px;position: absolute;left:50%;transform: translateX(-170px);-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-touch-callout: none;margin-top: 155px;z-index: 2;pointer-events:none;touch-action: none;color: #194688;">name</span></div>
 <p class = "title1">青云社区</p>
 <p class = "title2">现在登录你的账户</p>
 <p class = "window2"> </p>
+<p class="name-text">用户名</p>
 <button class="ripple-btn">注册</button>
 
 
