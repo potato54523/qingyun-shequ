@@ -67,14 +67,38 @@ body{
 </style>
 </head>
 <body>
-<div><input type="text" id="name" class="name-log-in"><span style="font-size: 16px;position: absolute;left:50%;transform: translateX(-170px);-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-touch-callout: none;margin-top: 155px;z-index: 2;pointer-events:none;touch-action: none;color: #194688;">name</span></div>
+<input type="text" id="name" class="name-log-in">
 <p class = "title1">青云社区</p>
 <p class = "title2">现在登录你的账户</p>
 <p class = "window2"> </p>
 <p class="name-text">用户名</p>
 <button class="ripple-btn">注册</button>
+<button class="ripple-btn1" id="readBtn">登录</button>
 
-
+<div id="result">等待读取...</div>
 </body>
 
 <script src="HTML/log in/log in.js"></script>
+<script>
+
+         // 获取页面元素
+         const readBtn = document.getElementById('readBtn');
+         const resultDom = document.getElementById('result');
+         // 点击按钮，请求后端 read.js 接口
+         readBtn.onclick = async function(){
+             try{
+                 resultDom.innerText = "正在读取...";
+                 // 请求Cloudflare Pages后端接口，前端看不到数据库id、密钥
+                 const res = await fetch('/api/read');
+                 const data = await res.json();
+                 if(res.ok){
+                     // 成功，展示拿到的jsonb数据
+                     resultDom.innerText = JSON.stringify(data, null, 2);
+                 }else{
+                     resultDom.innerText = `读取失败：${data.msg}`;
+                 }
+             }catch(err){
+                 resultDom.innerText = `网络错误：${err.message}`;
+             }
+         }
+</script>
