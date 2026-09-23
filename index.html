@@ -89,7 +89,7 @@ body{
              try{
                  resultDom.innerText = "正在读取...";
                  // 请求Cloudflare Pages后端接口，前端看不到数据库id、密钥
-                 const res = await fetch('/api/read');
+                 const res = await fetch('/date/login.js');
                  const data = await res.json();
                  if(res.ok){
                      // 成功，展示拿到的jsonb数据
