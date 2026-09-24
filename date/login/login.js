@@ -17,7 +17,7 @@ export default async function onRequest(context) {
     const tableName = "user_date"
     // =====================【需要修改】=====================
     // rowId：变量，要读取那一行数据的id
-    const rowId = 2
+    const val = jsonbObj.user1
     // =====================【需要修改】=====================
     // jsonbField：变量，表里存储JSON数据的jsonb字段名
     const jsonbField = "user_date"
