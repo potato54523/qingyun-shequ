@@ -1,7 +1,11 @@
 {
-  "name": "qingyun-shequ",
-  "compatibility_date": "2026-09-25",
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "my-spa",
+  "main": "src/index.js",
+  // Set this to today's date
+  "compatibility_date": "2026-09-26",
   "assets": {
-    "directory": "./"
+    "directory": "./dist",
+    "binding": "ASSETS"
   }
 }
