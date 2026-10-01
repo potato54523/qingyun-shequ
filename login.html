@@ -1,0 +1,125 @@
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="HTML/log in/log in.css">
+<link rel="stylesheet" href="HTML/log in/input-log-in.css">
+<title>青云社区</title>
+<style>
+@font-face{
+    font-family: "TTFFont";
+    src: url("assets/ttf/黑体\(1\).ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+body{
+    background-color: #dfecff;
+    background-size: cover;
+}
+.title1{
+    font-size:30px;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 1;
+    margin-top:30px;
+    font-family: "TTFFont",sans-serif;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.title2{
+    font-size:20px;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top:70px;
+    z-index: 1;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+
+
+
+.window2{
+    font-size:15px;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    background-color:#cadfff;
+    height:600px;
+    width:500px;
+    border-radius:10px;
+    box-shadow:10px 10px 50px -30px;
+    z-index: 0;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+#result{
+            margin-top:20px;
+            /* 和上方按钮距离20px */
+            white-space: pre-wrap;
+            /* 保留换行，JSON格式化后可以自动换行显示 */
+        }
+
+</style>
+</head>
+<body>
+<input type="text" id="name" class="name-log-in">
+<p class = "title1">青云社区</p>
+<p class = "title2">现在登录你的账户</p>
+<p class = "window2"> </p>
+<p class="name-text">用户名</p>
+<button class="ripple-btn">注册</button>
+<button class="ripple-btn1" id="readBtn">登录</button>
+
+<div id="result">等待读取...</div>
+</body>
+
+<script src="HTML/log in/log in.js"></script>
+<script>
+        // ========== 变量定义 ==========
+        // readBtn：变量，存储页面上id=readBtn的按钮DOM元素
+        const readBtn = document.getElementById('readBtn');
+        // resultDom：变量，存储页面上id=result的div容器DOM元素
+        const resultDom = document.getElementById('result');
+
+        // 给按钮绑定点击事件，点击后执行async异步函数
+        // async：异步函数，允许内部使用await等待网络请求完成，不会卡住页面
+        readBtn.onclick = async function(){
+            // try catch：捕获代码运行时错误（网络失败、接口报错）
+            try{
+                // 修改页面文字：提示正在请求数据
+                resultDom.innerText = "正在读取...";
+
+                // fetch()：浏览器内置网络请求函数，去请求后端接口
+                // 请求地址 /api/read 对应后端文件：/functions/api/read.js
+                const res = await fetch('/date/log in/login');
+                // await 等待后端返回响应，才往下执行代码
+
+                // 把后端返回的响应，解析成JSON对象
+                const data = await res.json();
+
+                // res.ok 判断：http状态码200~299代表请求成功
+                if(res.ok){
+                    // JSON.stringify：把数据转为字符串，null,2 格式化，自动换行缩进
+                    resultDom.innerText = JSON.stringify(data, null, 2);
+                }else{
+                    // 接口返回错误，展示后端传过来的提示msg
+                    resultDom.innerText = `读取失败：${data.msg}`;
+                }
+            }catch(err){
+                // catch捕获异常，err变量：保存错误对象
+                // 网络断开、跨域、请求超时都会进到这里
+                resultDom.innerText = `网络错误：${err.message}`;
+            }
+        }
+</script>

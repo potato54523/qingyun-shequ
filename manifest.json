@@ -1,0 +1,14 @@
+{
+    "name": "青云社区",
+    "short_name": "青云社区",
+    "icons": [
+        {
+            "src": "assets/textures/icon/qingyun.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ]
+
+
+
+}
