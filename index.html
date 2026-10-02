@@ -5,6 +5,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="stylesheet" href="bin/css/index/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bin/css/index/loading.css">
 <title>青云社区</title>
 <style>
 @font-face{
@@ -53,7 +54,11 @@ body{
 <a href="./user_download_assets/qingyunshequ/qingyun_shequ_Vs_1.apk"download="qingyun_shequ_Vs_1.apk" style="position: absolute; margin-left: 30px; margin-top: 60px; font-size: 20px;">下载客户端</a>
 <!-- 首页图标 -->
 <a href="index.html" style="text-decoration: none;"><i class="fa fa-home fa-2x" ></i></a> 
-
-<script>
-
-</script>
+  
+<div class="loading-overlay" id="loadingOverlay">
+    <svg class="loader" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="20" />
+    </svg>
+    <p class="loading-text">Welcom QingYun</p>
+  </div>
+<script src="bin/css/index/loading.js"></script>
