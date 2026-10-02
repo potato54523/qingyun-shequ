@@ -1,0 +1,96 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: #dfecff;
+    color: #dfecff;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  /* ===== 加载遮罩层 ===== */
+  .loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dfecff;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  /* 隐藏状态 */
+  .loading-overlay.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* 外层：整圈旋转 */
+  .loader {
+    width: 80px;
+    height: 80px;
+    animation: spin 1.6s linear infinite;
+  }
+
+  /* 圆环：单色，描边圆头 */
+  .loader circle {
+    fill: none;
+    stroke: #358dff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    animation: arc 1.6s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes arc {
+    0%, 100% { stroke-dasharray: 21 126; }
+    50%      { stroke-dasharray: 63 126; }
+  }
+
+  /* ===== 页面内容 ===== */
+  .content {
+    padding: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.2s;
+  }
+
+  .content.is-visible {
+    opacity: 1;
+  }
+
+  .content h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .content p {
+    line-height: 1.7;
+    color: #9fb0cc;
+    margin-bottom: 24px;
+  }
+
+  .content img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .loading-text{
+    position: absolute;
+    margin-top: 100px;
+    font-size: 20px;
+    color: #358dff;
+    z-index: 3;
+  }
