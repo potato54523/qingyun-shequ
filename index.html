@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="bin/css/index/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="bin/css/index/loading.css">
+<link rel="stylesheet" href="bin/css/index/lianyi.css">
 <title>青云社区</title>
 <style>
 @font-face{
@@ -42,6 +43,13 @@ body{
     user-select: none;
   -webkit-touch-callout: none;
   }
+  .a{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 190px;
+   z-index: 3;
+    color: #000000;
+  }
 </style>
 </head>
 
@@ -51,9 +59,8 @@ body{
 <p class="title-1" draggable="false">QingYun</p>
 <p class="message-1" draggable="false"></p>
 <p class="top-1"></p>
-<a href="./user_download_assets/qingyunshequ/qingyun_shequ_Vs_1.apk"download="qingyun_shequ_Vs_1.apk" style="position: absolute; margin-left: 30px; margin-top: 60px; font-size: 20px;">下载客户端</a>
 <!-- 首页图标 -->
-<a href="index.html" style="text-decoration: none;"><i class="fa fa-home fa-2x" ></i></a> 
+<a  class="a1" href="index.html" style="text-decoration: none;"><i class="fa fa-home fa-2x" ></i></a> 
   
 <div class="loading-overlay" id="loadingOverlay">
     <svg class="loader" viewBox="0 0 50 50">
@@ -61,4 +68,10 @@ body{
     </svg>
     <p class="loading-text">Welcom QingYun</p>
   </div>
+<p class="window-2"> </p>
+<p class="window-text"style="text-decoration: none;">WELCOME TO QINGYUN <br>    下载客户端<br>下载客户端可以更快进入青云社区,无需再登录浏览器</p>
+<button id="downloadBtn1" class="ripple-btn lianyi-btn">下载客户端(Android)</button>
+</body>
 <script src="bin/css/index/loading.js"></script>
+<script src="bin/css/index/lianyi.js"></script>
+<script src="bin/css/index/index.js"></script>
