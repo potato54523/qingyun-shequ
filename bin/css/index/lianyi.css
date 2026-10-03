@@ -1,0 +1,49 @@
+.ripple-btn {
+  -webkit-tap-highlight-color: transparent;
+   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation; /* 移除延迟 */ 
+   cursor: pointer;
+}
+.lianyi-btn {
+    background-color: #8db8fc;
+    height: 40px;
+    width: 150px;
+    border-radius:7px;
+    margin-left: 100px;
+    border: none;
+    outline: none;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  border-radius:10px;
+  box-shadow:3px 3px 20px -10px;
+  margin-top:300px;
+  z-index: 3;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4); /* 涟漪颜色*/
+  pointer-events: none;
+  animation: rippleAnim 0.6s ease-out forwards;
+}
+
+@keyframes rippleAnim {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+.ripple-btn:hover {
+   background: #9dc1fa;
+ }
