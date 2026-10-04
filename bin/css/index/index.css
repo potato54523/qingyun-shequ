@@ -20,7 +20,7 @@
     z-index: 2;
     width: 100px;
     height: 100vw;
-    background-color: #b3d1ff;
+    background-color: #a5ccff;
     margin-top: -50px;
 }
 .fa{
@@ -31,7 +31,7 @@
     position: absolute;
     margin-left: 300px;
     margin-top: 10px;
-    color: #67a1ff;
+    color: #6da5ff;
 }
 .fa-home:hover{
     color: #5c9afd;
@@ -53,7 +53,7 @@
     margin-top: 420px;
     width: 500px;
     height: 200px;
-    background-color: #cadfff;
+    background-color: #e0e0e0;
     border-radius:10px;
     box-shadow: 5px 5px 20px -10px #000000;
 }
@@ -75,7 +75,7 @@
     position: absolute;
     margin-left: 170px;
     margin-top: 10px;
-    color: #67a1ff;
+    color: #bebebe;
 }
 .top-1{
     height: 3px;
@@ -93,7 +93,7 @@
     margin-top: 420px;
     width: 90vw;
     height: 200px;
-    background-color: #cadfff;
+    background-color: #e0e0e0;
     border-radius:10px;
     box-shadow:10px 10px 50px -30px;
 }
