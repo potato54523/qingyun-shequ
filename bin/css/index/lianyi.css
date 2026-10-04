@@ -7,6 +7,7 @@
   -webkit-touch-callout: none;
   touch-action: manipulation; /* 移除延迟 */ 
    cursor: pointer;
+   position: absolute;
 }
 .lianyi-btn {
     background-color: #8db8fc;
@@ -22,8 +23,9 @@
   color:#000000;
   border-radius:10px;
   box-shadow:3px 3px 20px -10px;
-  margin-top:300px;
+  margin-top:550px;
   z-index: 3;
+     position: absolute;
 }
 
 .ripple {

@@ -1,0 +1,57 @@
+.assets-t{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 5vw;
+    font-size: 18px;
+    color: #000000;
+    z-index: 3;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.assets1-t{
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 5vw;
+    font-size: 18px;
+    color: #000000;
+    z-index: 3;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+.assets-b{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 250px;
+    background-color: #cadfff;
+    z-index: 2;
+    box-shadow: 5px 5px 20px -10px #000000;
+    border-radius:10px;
+}
+.assets-to{
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 88vw;
+    font-size: 18px;
+    z-index: 3;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+ color: #888;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.assets-to:hover {
+  color: #666;
+  transition: all 0.3s;
+}
