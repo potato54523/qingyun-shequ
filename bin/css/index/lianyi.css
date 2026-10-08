@@ -10,7 +10,7 @@
    position: absolute;
 }
 .lianyi-btn {
-    background-color: #a4c1ff;
+    background-color: #1660ab;
     height: 40px;
     width: 150px;
     border-radius:7px;
@@ -28,7 +28,7 @@
      position: absolute;
 }
 .ripple-btn:hover {
-   background: #97b8ff;
+   background: #105294;
    transition: all 0.3s;
  }
 .ripple {

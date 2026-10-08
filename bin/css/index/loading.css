@@ -43,7 +43,7 @@
   /* 圆环：单色，描边圆头 */
   .loader circle {
     fill: none;
-    stroke: #358dff;
+    stroke: #1660ab;
     stroke-width: 5;
     stroke-linecap: round;
     animation: arc 1.6s ease-in-out infinite;
@@ -91,6 +91,6 @@
     position: absolute;
     margin-top: 100px;
     font-size: 20px;
-    color: #358dff;
+    color: #1660ab;
     z-index: 3;
   }
