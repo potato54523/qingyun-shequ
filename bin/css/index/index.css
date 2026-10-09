@@ -31,16 +31,16 @@
     position: absolute;
     margin-left: 300px;
     margin-top: 10px;
-    color: #1660ab;
+    color: #9cc3df;
 }
 .fa-home:hover{
-    color: #105294;
+    color: #90bbda;
     transition: all 0.3s;
 }
 .top-1{
     height: 3px;
     width: 40px;
-    background-color: #1660ab;
+    background-color: #90bbda;
     position: absolute;
     z-index: 2;
     margin-left: 295px;
@@ -55,8 +55,7 @@
     height: 200px;
     background-color: #ffffff;
     border-radius:10px;
-    box-shadow: 5px 5px 20px -10px #000000;
-    border: 1px solid #b3b3b3;
+    border: 1px solid #e2e2e2;
 }
 .window-text{
     margin-left: 7vw;
@@ -76,12 +75,12 @@
     position: absolute;
     margin-left: 170px;
     margin-top: 10px;
-    color: #1660ab;
+    color: #9cc3df;
 }
 .top-1{
     height: 3px;
     width: 40px;
-    background-color: #1660ab;
+    background-color: #90bbda;
     position: absolute;
     z-index: 2;
     margin-left: 165px;
@@ -96,8 +95,7 @@
     height: 200px;
     background-color: #ffffff;
     border-radius:10px;
-    box-shadow:10px 10px 50px -30px;
-    border: 1px solid #b3b3b3;
+    border: 1px solid #e2e2e2;
 }
 .window-text{
     margin-left: 7vw;

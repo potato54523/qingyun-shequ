@@ -9,8 +9,8 @@
   }
 
   body {
-    background: #dfecff;
-    color: #dfecff;
+    background: #fbfbfb;
+    color: #fbfbfb;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   }
 
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #dfecff;
+    background: #fbfbfb;
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
